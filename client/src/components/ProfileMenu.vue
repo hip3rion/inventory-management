@@ -123,8 +123,8 @@ const handleLogout = () => {
 .profile-button {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.5rem 0.875rem;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -181,9 +181,11 @@ const handleLogout = () => {
 }
 
 .dropdown-header {
-  padding: 1rem;
+  padding: var(--space-4);
   display: flex;
-  gap: 0.875rem;
+  /* 0.875rem (14px) was between two steps; snapped up since this gap
+     separates the avatar from the name/email block, not an inset. */
+  gap: var(--space-4);
   align-items: center;
   background: #f8fafc;
 }
@@ -212,7 +214,7 @@ const handleLogout = () => {
   font-weight: 600;
   color: #0f172a;
   font-size: 0.938rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
 }
 
 .user-email {
@@ -226,15 +228,15 @@ const handleLogout = () => {
 .dropdown-divider {
   height: 1px;
   background: #e2e8f0;
-  margin: 0.5rem 0;
+  margin: var(--space-2) 0;
 }
 
 .dropdown-item {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
   background: none;
   border: none;
   text-align: left;
@@ -273,7 +275,7 @@ const handleLogout = () => {
   color: white;
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.125rem 0.5rem;
+  padding: var(--space-1) var(--space-2);
   border-radius: 12px;
   min-width: 20px;
   text-align: center;
