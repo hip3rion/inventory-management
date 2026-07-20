@@ -105,14 +105,17 @@ export default {
   background: #f8fafc;
   border-bottom: 1px solid #e2e8f0;
   padding: 0.75rem 0;
+  /* Sticks directly under the topbar in the content column now that the
+     shell is a sidebar layout, not the old full-width top nav. */
   position: sticky;
-  top: 70px;
+  top: var(--topbar-h);
   z-index: 90;
 }
 
 .filters-container {
-  max-width: 1600px;
-  margin: 0 auto;
+  /* No longer centers with max-width/margin: auto — the sidebar owns the
+     left edge, so this bar fills the content column and matches its
+     horizontal inset instead. */
   padding: 0 2rem;
   display: flex;
   align-items: center;
