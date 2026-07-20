@@ -142,7 +142,7 @@ const getStockBadgeClass = (stockLevel) => {
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  padding: 1rem;
+  padding: var(--space-4);
 }
 
 .modal-container {
@@ -161,7 +161,7 @@ const getStockBadgeClass = (stockLevel) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: var(--space-6);
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -177,7 +177,7 @@ const getStockBadgeClass = (stockLevel) => {
   border: none;
   color: #64748b;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--space-2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,16 +193,16 @@ const getStockBadgeClass = (stockLevel) => {
 .modal-body {
   flex: 1;
   overflow-y: auto;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .product-header {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding-bottom: 1.5rem;
+  gap: var(--space-5);
+  padding-bottom: var(--space-6);
   border-bottom: 1px solid #e2e8f0;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 
 .product-icon {

@@ -150,3 +150,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* .stats-grid itself is the global card grid defined in App.vue; only the
+   column floor is overridden here. At 280px it fit just 3 of these 4
+   priority cards per row now that the sidebar has taken 260px off the
+   content column, orphaning the 4th onto its own row. */
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+</style>

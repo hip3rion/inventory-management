@@ -172,6 +172,14 @@ export default {
 </script>
 
 <style scoped>
+/* .stats-grid itself is the global card grid defined in App.vue; only the
+   column floor is overridden here. At 280px it fit just 3 of these 4
+   status cards per row now that the sidebar has taken 260px off the
+   content column, orphaning the 4th onto its own row. */
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
 /* Fixed table layout to prevent column shifting */
 .orders-table {
   table-layout: fixed;
@@ -224,7 +232,7 @@ export default {
 .items-summary::before {
   content: '▶';
   display: inline-block;
-  margin-right: 0.375rem;
+  margin-right: var(--space-2);
   font-size: 0.75rem;
   transition: transform 0.2s;
 }
@@ -243,12 +251,12 @@ export default {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 0.5rem;
+  margin-top: var(--space-2);
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 0.75rem;
+  padding: var(--space-3);
   z-index: 10;
   min-width: 300px;
   max-width: 400px;
@@ -257,8 +265,8 @@ export default {
 .item-entry {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.5rem;
+  gap: var(--space-1);
+  padding: var(--space-2);
   border-bottom: 1px solid #f1f5f9;
 }
 
