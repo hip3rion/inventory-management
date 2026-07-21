@@ -112,7 +112,7 @@
           class="nav-item"
           :class="{ active: $route.path === '/reports' }"
           :aria-current="$route.path === '/reports' ? 'page' : undefined"
-          data-tooltip="Reports"
+          :data-tooltip="t('nav.reports')"
         >
           <span class="nav-icon" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -120,7 +120,7 @@
               <path d="M6.5 13.5V10.5M10 13.5V8M13.5 13.5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </span>
-          <span class="nav-label">Reports</span>
+          <span class="nav-label">{{ t('nav.reports') }}</span>
         </router-link>
       </nav>
       <div class="sidebar-footer">

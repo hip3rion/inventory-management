@@ -1,0 +1,26 @@
+{
+  "skill_name": "vue-component-audit",
+  "evals": [
+    {
+      "id": 0,
+      "name": "broad-audit",
+      "prompt": "Can you audit the Vue components in this app (client/src) and give me a report on performance and code-reuse opportunities? I want concrete file:line references, not generic advice.",
+      "expected_output": "A structured report with Performance and Code Reuse sections, each finding anchored to specific file:line references, with a suggested fix per finding. Should surface at least the Dashboard.vue size issue and some cross-view duplication.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "dashboard-bloat",
+      "prompt": "Dashboard.vue feels huge and I think it's doing too much — can you review client/src/views/Dashboard.vue and tell me what's wrong performance-wise and where I could break it apart into composables or smaller components?",
+      "expected_output": "A focused report on Dashboard.vue specifically: performance findings within the file, and a concrete seam analysis for splitting it into smaller components/composables (not just 'this file is too long').",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "fetch-duplication",
+      "prompt": "I have a hunch we're copy-pasting the same fetch/loading/error boilerplate across our views in client/src/views. Can you check and tell me where, and how bad it is?",
+      "expected_output": "Identifies the repeated loading/error/data-fetch scaffold across multiple view files with file:line references for each occurrence, and proposes a shared composable as the fix.",
+      "files": []
+    }
+  ]
+}
